@@ -6,6 +6,7 @@ RUN adduser --disabled-password --gecos '' ml-api-user
 WORKDIR /opt/house-prices-api
 
 ARG GEMFURY_PUSH_URL
+RUN echo $GEMFURY_PUSH_URL
 
 # Install requirements, including from Gemfury
 ADD ./house-prices-api /opt/house-prices-api/
